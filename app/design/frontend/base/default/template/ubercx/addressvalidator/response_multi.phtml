@@ -1,0 +1,47 @@
+<?php
+/*
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the GNU General Public License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/gpl-license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@refersion.com so we can send you a copy immediately.
+ *
+ * @category   UBERCX
+ * @package    Ubercx_Addressvalidator
+ * @copyright  Copyright (c) 2015 Ubercx, Inc.
+ * @author	   Ubercx Developer <ubercx_nospam@jframeworks.com>
+ * @license    http://opensource.org/licenses/gpl-license GNU General Public License
+ */
+
+$storeId = Mage::app()->getStore()->getId();
+$results = $this->getResult();
+if(is_array($results)){
+foreach($results as $result){
+if($result!=""){
+	echo '<script type="text/javascript" >var non_ajax_response = '.$result.'</script>';
+	$obj = json_decode($result);
+	if($obj->error){
+?>
+<script type="text/javascript" > 
+var html = '<div id="" class=""><ul class="messages"><li class="error-msg"><ul><li><span>There appears to be a problem with the address. Please click Change to check the corrections or you can continue with the current address.</span></li></ul></li></ul><div id=""><div id="" class="ubercx-addr-radio"></div><div style="display: none;" id="ubercx_orig_placeholder"></div></div></div>';
+document.observe("dom:loaded", function() {
+$$('#shipping_method_form div.col2-set .box-title a').each(function(index) {
+ var hrefv =  index.readAttribute('href');
+
+ regx = /id\/<?php echo $obj->address_id?>/;
+ regx2 = /id=<?php echo $obj->address_id?>/;
+ if(regx.test(hrefv)||regx2.test(hrefv)){
+ 	index.up('div.col-1').innerHTML = html+index.up('div.col-1').innerHTML;
+ }
+});
+});
+</script>
+<?php } } }}?>
+<?php /*?><script src="<?php echo $this->getSkinUrl('js/ubercx/response_handler.js') ?>"></script><?php */?>
+

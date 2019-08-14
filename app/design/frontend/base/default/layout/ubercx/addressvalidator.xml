@@ -23,7 +23,17 @@
 <layout version="0.1.0">
 	<checkout_onepage_index>			
 		<reference name="before_body_end">
-			<block type="core/template" name="addressvalidator.response" template ="ubercx/addressvalidator/response.phtml" />
+			<block type="core/template" name="addressvalidator.response" template ="ubercx/addressvalidator/response_onepage.phtml" />
 		</reference>
 	</checkout_onepage_index>
+	<checkout_multishipping_customer_address>
+  	<reference name="content">
+    	<block type="ubercx_addressvalidator/response" after="customer_address_edit" name="ubercx_addressvalidator_response" template="ubercx/addressvalidator/response.phtml"/>
+    </reference>
+  </checkout_multishipping_customer_address>
+	<checkout_multishipping_shipping>
+		<reference name="content">
+		<block type="ubercx_addressvalidator/response" after="checkout_billing_items" name="ubercx_addressvalidator_responsemulti" template="ubercx/addressvalidator/response_multi.phtml"/>
+		</reference>
+	</checkout_multishipping_shipping> 
 </layout>

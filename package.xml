@@ -1,24 +1,26 @@
 <?xml version="1.0"?>
 <package>
     <name>UberCX_AVS</name>
-    <version>1.0.1</version>
+    <version>1.1.0</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/gpl-license">GNU General Public License</license>
     <channel>community</channel>
     <extends/>
-    <summary>Address validater, validates address from USA</summary>
-    <description>Address validater, validates address from USA, and provide correct address as suggestion. </description>
-    <notes>First stable release</notes>
-    <authors><author><name>UberCX</name><user>UberCX</user><email>support@ubercx.io</email></author></authors>
-    <date>2015-09-16</date>
+    <summary>Shipping Address validation and Corrections.</summary>
+    <description>Address validater, validates address from USA, and provide correct address(es) as suggestion. </description>
+    <notes>Second stable release</notes>
+    <authors><author><name>snapCX</name><user>snapCX</user><email>support@snapcx.io</email></author></authors>
+    <date>2015-10-28</date>
     <time>06:14:23</time>
     <contents>
       <target name="magecommunity">
 	<dir name="Ubercx">
 	  <dir name="Addressvalidator">
+            <dir name="Block"><file name="Response.php" hash="42676f5adc05d1919142337c3677107e"/></dir>
 	    <dir name="Helper"><file name="Data.php" hash="e2208c32f13bd9d9877e4964bd6286cc"/></dir>
 	    <dir name="Model"><file name="Observer.php" hash="0b42264e5e81c3a018bd4abcf3108326"/></dir>
-      	    <dir name="etc"><file name="adminhtml.xml" hash="4cb243feddb112f72df7b87c4c3cdd74"/>
+      	    <dir name="etc">
+                <file name="adminhtml.xml" hash="4cb243feddb112f72df7b87c4c3cdd74"/>
 		<file name="config.xml" hash="47cfe4b52c6eeb92f5b11a0c69659feb"/>
 		<file name="system.xml" hash="f009266afb65bb05032c1672549e9af8"/>
 	    </dir>
@@ -34,7 +36,11 @@
 	      </dir>
 	      <dir name="template">
 		<dir name="ubercx">
-		  <dir name="addressvalidator"><file name="response.phtml" hash="3dc79ad5891001ab256c975be62d106c"/></dir>
+		  <dir name="addressvalidator">
+                    <file name="response.phtml" hash="3dc79ad5891001ab256c975be62d106c"/>
+                    <file name="response_multi.phtml" hash="bb77cab51d35c13e0459868d279905f1"/>
+                    <file name="response_onepage.phtml" hash="d660263406a413138dc66206c89d837d"/>
+                  </dir>
 		</dir>
 	      </dir>
             </dir>

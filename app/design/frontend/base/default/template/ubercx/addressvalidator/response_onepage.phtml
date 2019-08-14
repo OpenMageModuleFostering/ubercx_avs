@@ -20,31 +20,15 @@
  */
 
 $storeId = Mage::app()->getStore()->getId();
-$results = $this->getResult();
-if(is_array($results)){
-	foreach($results as $res){
-		$obj = json_decode($res);
-		if(Mage::app()->getRequest()->getParam('id')==$obj->address_id){
-			$result = $res;
-		}
-	}
-}
-else{
-	$result = $results;
-}
-
-if($result!=""){
-	echo '<script type="text/javascript" >var non_ajax_response = '.$result.'</script>';
-}
+echo '<script type="text/javascript" >var non_ajax_response = \'\';</script>';
 ?>
 <script type="text/javascript" > 
-/*var html = '<div id="ubercx_addr_correction" class="" style="display: none;"><ul class="messages"><li class="error-msg"><ul><li><span>There appears to be a problem with the address. Please correct or select one below.</span></li></ul></li></ul><div id="ubercx_orig_addr"><div id="ubercx_addr_radio" class="ubercx-addr-radio"></div><div style="display: none;" id="ubercx_orig_placeholder"></div></div></div>';*/
+var html = '<div id="ubercx_addr_correction" class="" style="display: none;"><ul class="messages"><li class="error-msg"><ul><li><span>There appears to be a problem with the address. Please correct or select one below.</span></li></ul></li></ul><div id="ubercx_orig_addr"><div id="ubercx_addr_radio" class="ubercx-addr-radio"></div><div style="display: none;" id="ubercx_orig_placeholder"></div></div></div>';
 
 var html_ship = '<div id="ubercx_ship_addr_correction" class="" style="display: none;"><ul class="messages"><li class="error-msg"><ul><li><span>There appears to be a problem with the address. Please correct or select one below.</span></li></ul></li></ul><div id="ubercx_ship_orig_addr"><div id="ubercx_ship_addr_radio" class="ubercx-addr-radio"></div><div style="display: none;" id="ubercx_ship_orig_placeholder"></div></div></div>';
 
-//$('co-billing-form').innerHTML = html+$('co-billing-form').innerHTML;
-$('form-validate').innerHTML = html_ship+$('form-validate').innerHTML;
+$('co-billing-form').innerHTML = html+$('co-billing-form').innerHTML;
+$('co-shipping-form').innerHTML = html_ship+$('co-shipping-form').innerHTML;
 </script>
-
 <script src="<?php echo $this->getSkinUrl('js/ubercx/response_handler.js') ?>"></script>
 

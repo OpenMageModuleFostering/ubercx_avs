@@ -23,7 +23,7 @@
 <config>
   <modules>
     <Ubercx_Addressvalidator>
-      <version>1.0.1</version>
+      <version>1.1.0</version>
     </Ubercx_Addressvalidator>
   </modules>
   <frontend>
@@ -32,7 +32,7 @@
         <observers>            
           <addressvalidator_checkaddress>                
             <class>ubercx_addressvalidator/observer</class>
-            <method>validateAddress</method>
+            <method>validateOnepageAddress</method>
           </addressvalidator_checkaddress>
         </observers>
       </controller_action_postdispatch_checkout_onepage_saveBilling>
@@ -40,10 +40,26 @@
         <observers>            
           <addressvalidator_checkaddress>                
             <class>ubercx_addressvalidator/observer</class>
-            <method>validateAddress</method>
+            <method>validateOnepageAddress</method>
           </addressvalidator_checkaddress>
         </observers>
       </controller_action_postdispatch_checkout_onepage_saveShipping>
+			<customer_address_validation_after>        
+        <observers>            
+          <addressvalidator_checkaddress>                
+            <class>ubercx_addressvalidator/observer</class>
+            <method>validateAddress</method>
+          </addressvalidator_checkaddress>
+        </observers>
+      </customer_address_validation_after>
+			<controller_action_postdispatch_checkout_multishipping_addressesPost>        
+        <observers>            
+          <addressvalidator_checkaddress>                
+            <class>ubercx_addressvalidator/observer</class>
+            <method>validateMultiShippingAddress</method>
+          </addressvalidator_checkaddress>
+        </observers>
+      </controller_action_postdispatch_checkout_multishipping_addressesPost>
     </events>
     <layout>
       <updates>
@@ -67,10 +83,15 @@
         <class>Ubercx_Addressvalidator_Helper</class>
       </addressvalidator>
     </helpers>
+		<blocks>
+    	<ubercx_addressvalidator>
+				<class>Ubercx_Addressvalidator_Block</class>
+			</ubercx_addressvalidator>
+    </blocks>
   </global>
   <default>
     <addressvalidator>
-			<ubercx_api_url><![CDATA[https://api.ubercx.io/avs/v1/validateAddress]]></ubercx_api_url>
+			<ubercx_api_url><![CDATA[https://api.snapcx.io/avs/v1/validateAddress]]></ubercx_api_url>
 		</addressvalidator>
   </default>
 </config>

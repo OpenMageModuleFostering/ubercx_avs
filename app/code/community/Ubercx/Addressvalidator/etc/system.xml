@@ -23,7 +23,7 @@
 <config>
   <tabs>
     <ubercx translate="label" module="addressvalidator">
-      <label>UberCX Plugins</label>
+      <label>snapCX Plugins</label>
       <sort_order>301</sort_order>
     </ubercx>
   </tabs>
@@ -32,20 +32,20 @@
       <label>Address Validation Settings</label>
       <tab>ubercx_addressvalidator</tab>
       <frontend_type>text</frontend_type>
-      <sort_order>2</sort_order>
+      <sort_order>992</sort_order>
       <show_in_default>1</show_in_default>
       <show_in_website>1</show_in_website>
       <show_in_store>1</show_in_store>
       <tab>ubercx</tab>
       <groups>
         <addressvalidator_settings translate="label">
-          <label>UberCX Address Validator Settings</label>
+          <label>snapCX Address Validator Settings</label>
           <frontend_type>text</frontend_type>
           <sort_order>1</sort_order>
           <show_in_default>1</show_in_default>
           <show_in_website>1</show_in_website>
           <show_in_store>1</show_in_store>
-					<comment><![CDATA[This plugin allows address validation.It connects with ubercx API, which responds in JSON payload. Please visit this <a href="https://ubercx.io/plugins">link</a> to detail documentation about plugins and recipes.]]></comment>
+					<comment><![CDATA[This plugin allows address validation.It connects with snapcx API, which responds in JSON payload. Please visit this <a target="_blank" href="https://snapcx.io/avs/plugins/magento">link</a> to detail documentation about plugins and recipes.]]></comment>
           <fields>
   	      <addressvalidator_user_key translate="label">
               <label>User Key</label>
@@ -54,7 +54,7 @@
               <show_in_default>1</show_in_default>
               <show_in_website>0</show_in_website>
               <show_in_store>0</show_in_store>
-              <comment><![CDATA[<a href="https://ubercx.io/signup" target="_blank">Get your User Key</a>]]></comment>
+              <comment><![CDATA[<a href="https://snapcx.io/signup" target="_blank">Get your User Key</a>]]></comment>
             </addressvalidator_user_key>
             <addressvalidator_active translate="label">
               <label>Enabled</label>

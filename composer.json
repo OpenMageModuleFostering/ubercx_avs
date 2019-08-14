@@ -3,11 +3,11 @@
     "type": "magento-module",
     "license": "GNU-General-Public-License",
     "homepage": "",
-    "description": "Address validater, validates address from USA",
+    "description": "Shipping Address validation and Corrections.",
     "authors": [
     {
-        "name": "UberCX",
-        "email": "support@ubercx.io"
+        "name": "snapCX",
+        "email": "support@snapcx.io"
     }
 ],
     "suggest": {
