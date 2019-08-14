@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>UberCX_AVS</name>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/gpl-license">GNU General Public License</license>
     <channel>community</channel>

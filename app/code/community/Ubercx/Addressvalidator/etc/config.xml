@@ -23,7 +23,7 @@
 <config>
   <modules>
     <Ubercx_Addressvalidator>
-      <version>1.0.0</version>
+      <version>1.0.1</version>
     </Ubercx_Addressvalidator>
   </modules>
   <frontend>

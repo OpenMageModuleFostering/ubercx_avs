@@ -198,6 +198,9 @@ class Ubercx_Addressvalidator_Model_Observer extends Mage_Core_Model_Abstract {
 							$result['error'] = true;
 							break;	
 						}
+						else{
+							return $observer;
+						}
 					break;
 					case 'AVS_02':
 						//OK we should get a bunch of returned addr's - lets
