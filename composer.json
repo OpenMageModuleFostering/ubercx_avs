@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/UberCX_AVS",
+    "type": "magento-module",
+    "license": "GNU-General-Public-License",
+    "homepage": "",
+    "description": "Address validater, validates address from USA",
+    "authors": [
+    {
+        "name": "UberCX",
+        "email": "support@ubercx.io"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

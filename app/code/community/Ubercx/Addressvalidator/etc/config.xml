@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the GNU General Public License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/gpl-license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@refersion.com so we can send you a copy immediately.
+ *
+ * @category   UBERCX
+ * @package    Ubercx_Addressvalidator
+ * @copyright  Copyright (c) 2015 Ubercx, Inc.
+ * @author	   Ubercx Developer <ubercx_nospam@jframeworks.com>
+ * @license    http://opensource.org/licenses/gpl-license GNU General Public License
+ */
+-->
+<config>
+  <modules>
+    <Ubercx_Addressvalidator>
+      <version>1.0.0</version>
+    </Ubercx_Addressvalidator>
+  </modules>
+  <frontend>
+    <events>
+      <controller_action_postdispatch_checkout_onepage_saveBilling>        
+        <observers>            
+          <addressvalidator_checkaddress>                
+            <class>ubercx_addressvalidator/observer</class>
+            <method>validateAddress</method>
+          </addressvalidator_checkaddress>
+        </observers>
+      </controller_action_postdispatch_checkout_onepage_saveBilling>
+      <controller_action_postdispatch_checkout_onepage_saveShipping>        
+        <observers>            
+          <addressvalidator_checkaddress>                
+            <class>ubercx_addressvalidator/observer</class>
+            <method>validateAddress</method>
+          </addressvalidator_checkaddress>
+        </observers>
+      </controller_action_postdispatch_checkout_onepage_saveShipping>
+    </events>
+    <layout>
+      <updates>
+        <ubercx_addressvalidator>
+          <file>ubercx/addressvalidator.xml</file>
+        </ubercx_addressvalidator>
+      </updates>
+    </layout>
+  </frontend>
+  <global>
+    <models>
+      <ubercx_addressvalidator>
+        <class>Ubercx_Addressvalidator_Model</class>
+      </ubercx_addressvalidator>
+    </models>
+    <helpers>
+      <ubercx_addressvalidator>
+        <class>Ubercx_Addressvalidator_Helper</class>
+      </ubercx_addressvalidator>
+      <addressvalidator>
+        <class>Ubercx_Addressvalidator_Helper</class>
+      </addressvalidator>
+    </helpers>
+  </global>
+  <default>
+    <addressvalidator>
+			<ubercx_api_url><![CDATA[https://api.ubercx.io/avs/v1/validateAddress]]></ubercx_api_url>
+		</addressvalidator>
+  </default>
+</config>

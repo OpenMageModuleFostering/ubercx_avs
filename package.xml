@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<package>
+    <name>UberCX_AVS</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/gpl-license">GNU General Public License</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Address validater, validates address from USA</summary>
+    <description>Address validater, validates address from USA, and provide correct address as suggestion. </description>
+    <notes>First stable release</notes>
+    <authors><author><name>UberCX</name><user>UberCX</user><email>support@ubercx.io</email></author></authors>
+    <date>2015-09-16</date>
+    <time>06:14:23</time>
+    <contents>
+      <target name="magecommunity">
+	<dir name="Ubercx">
+	  <dir name="Addressvalidator">
+	    <dir name="Helper"><file name="Data.php" hash="e2208c32f13bd9d9877e4964bd6286cc"/></dir>
+	    <dir name="Model"><file name="Observer.php" hash="0b42264e5e81c3a018bd4abcf3108326"/></dir>
+      	    <dir name="etc"><file name="adminhtml.xml" hash="4cb243feddb112f72df7b87c4c3cdd74"/>
+		<file name="config.xml" hash="47cfe4b52c6eeb92f5b11a0c69659feb"/>
+		<file name="system.xml" hash="f009266afb65bb05032c1672549e9af8"/>
+	    </dir>
+          </dir>
+	</dir>
+      </target>
+      <target name="magedesign">
+	<dir name="frontend">
+	  <dir name="base">
+	    <dir name="default">
+	      <dir name="layout">
+		<dir name="ubercx"><file name="addressvalidator.xml" hash="8b8c2f2e50dcea0ed3dbe3fabe4ca668"/></dir>
+	      </dir>
+	      <dir name="template">
+		<dir name="ubercx">
+		  <dir name="addressvalidator"><file name="response.phtml" hash="3dc79ad5891001ab256c975be62d106c"/></dir>
+		</dir>
+	      </dir>
+            </dir>
+	  </dir>
+	</dir>
+      </target>
+      <target name="mageskin">
+	<dir name="frontend">
+	  <dir name="base">
+	    <dir name="default">
+	      <dir name="js">
+		<dir name="ubercx"><file name="response_handler.js" hash="44df81791bd93eb4147bff874fef90e4"/></dir>
+	      </dir>
+	    </dir>
+	  </dir>
+	</dir>
+      </target>
+      <target name="mageetc">
+	<dir name="modules"><file name="Ubercx_Addressvalidator.xml" hash="eb8a4036f116f346e5b8bcfc789bebd3"/></dir>
+     </target>
+   </contents>
+   <compatible/>
+  <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

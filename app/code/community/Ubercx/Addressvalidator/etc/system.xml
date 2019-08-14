@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the GNU General Public License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/gpl-license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@refersion.com so we can send you a copy immediately.
+ *
+ * @category   UBERCX
+ * @package    Ubercx_Addressvalidator
+ * @copyright  Copyright (c) 2015 Ubercx, Inc.
+ * @author	   Ubercx Developer <ubercx_nospam@jframeworks.com>
+ * @license    http://opensource.org/licenses/gpl-license GNU General Public License
+ */
+-->
+<config>
+  <tabs>
+    <ubercx translate="label" module="addressvalidator">
+      <label>UberCX Plugins</label>
+      <sort_order>301</sort_order>
+    </ubercx>
+  </tabs>
+  <sections>
+    <addressvalidator translate="label" module="addressvalidator">
+      <label>Address Validation Settings</label>
+      <tab>ubercx_addressvalidator</tab>
+      <frontend_type>text</frontend_type>
+      <sort_order>2</sort_order>
+      <show_in_default>1</show_in_default>
+      <show_in_website>1</show_in_website>
+      <show_in_store>1</show_in_store>
+      <tab>ubercx</tab>
+      <groups>
+        <addressvalidator_settings translate="label">
+          <label>UberCX Address Validator Settings</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>1</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+					<comment><![CDATA[This plugin allows address validation.It connects with ubercx API, which responds in JSON payload. Please visit this <a href="https://ubercx.io/plugins">link</a> to detail documentation about plugins and recipes.]]></comment>
+          <fields>
+  	      <addressvalidator_user_key translate="label">
+              <label>User Key</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>1</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>0</show_in_website>
+              <show_in_store>0</show_in_store>
+              <comment><![CDATA[<a href="https://ubercx.io/signup" target="_blank">Get your User Key</a>]]></comment>
+            </addressvalidator_user_key>
+            <addressvalidator_active translate="label">
+              <label>Enabled</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>3</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>0</show_in_website>
+              <show_in_store>0</show_in_store>
+            </addressvalidator_active>
+          </fields>
+        </addressvalidator_settings>
+      </groups>
+    </addressvalidator>
+  </sections>
+</config>
