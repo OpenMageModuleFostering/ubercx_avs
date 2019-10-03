@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/UberCX_AVS",
+    "name": "OpenMageModuleFostering\/UberCX_AVS",
     "type": "magento-module",
     "license": "GNU-General-Public-License",
     "homepage": "",
     "description": "Shipping Address validation and Corrections.",
     "authors": [
-    {
-        "name": "snapCX",
-        "email": "support@snapcx.io"
-    }
-],
+        {
+            "name": "snapCX",
+            "email": "support@snapcx.io"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
